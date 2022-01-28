@@ -22,8 +22,9 @@ def str_to_tree(string = None, p=None, q=None):
         deq.append(TreeNode(s))
 
     if len(deq) <= 1:
-        raise ValueError
-
+        #raise ValueError
+        return None
+        
     # 2개일 때는 간단 
     if len(deq) == 2:
         deq[0].left = deq[1]
