@@ -23,7 +23,7 @@ def str_to_tree(string = None, p=None, q=None):
 
     if len(deq) <= 1:
         # raise ValueError
-        return None
+        return None, None, None
 
     # 2개일 때는 간단 
     if len(deq) == 2:
