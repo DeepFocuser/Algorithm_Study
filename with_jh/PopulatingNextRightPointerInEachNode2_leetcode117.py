@@ -1,4 +1,5 @@
 from collections import deque
+from collections import defaultdict
 
 class TreeNode:
 
@@ -101,15 +102,12 @@ def str_to_tree(string = None, p=None, q=None):
                         
         return tree[0].pop(), p, q
 
-from collections import defaultdict
-from collections import deque
-
 class Solution:
     def connect(self, root: 'Node') -> 'Node':
 
         if root:
-            tree_val = defaultdict(deque)
-            tree_val[0] = deque([root])
+            tree_val = defaultdict(list)
+            tree_val[0] =[root]
 
             def get_depth(root, i=1):
                 if root:
