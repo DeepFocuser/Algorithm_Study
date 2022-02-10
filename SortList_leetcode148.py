@@ -7,29 +7,30 @@ class Solution:
 
         deq = []
         if head:
-            while head:
-                deq.append(head.val)
-                head=head.next
+            temp = head # temp는 head를 참조함
+            while temp:
+                deq.append(temp.val)
+                temp=temp.next 
+            deq.sort()
 
-            deq = sorted(deq) # 오름차순 정렬
-            next = None
-            while deq:
-                node = ListNode(val=deq.pop(), next=next)
-                next = node
+            temp = head # temp는 head를 참조함
+            for i in range(len(deq)):
+                temp.val=deq[i]
+                temp = temp.next
 
-            return node
+            return head
         return None
 
 '''
 Follow up: Can you sort the linked list in O(n logn) time and O(1) memory (i.e. constant space)?
 '''
-# 2. 생각중
-class Solution:
-    def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+# # 2. 생각중
+# class Solution:
+#     def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
-        if head:
-            pass
-        return None
+#         if head:
+#             pass
+#         return None
 
 if __name__ == "__main__":
     print(Solution().sortList(head = listtollist([4,2,1,3]))) # [1,2,3,4]
