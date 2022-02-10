@@ -27,7 +27,7 @@ Follow up: Can you sort the linked list in O(n logn) time and O(1) memory (i.e. 
 # # 2. 생각중
 # class Solution:
 #     def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-
+          # wow
 #         if head:
 #             pass
 #         return None
