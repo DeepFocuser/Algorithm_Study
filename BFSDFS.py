@@ -89,7 +89,7 @@ def dfs_recursive(graph, start_node, end_node, visit=dict()):
 
 if __name__ == "__main__":
 
-    print("bfs :",bfs(graph, start_node='A', end_node="L"))
+    print("bfs :",bfs(graph, start_node='A', end_node="C"))
     print("bfs path :", path_bfs)
     # print("dfs :",dfs(graph, start_node='A', end_node="D"))
     # print("dfs path :", path_bfs)
