@@ -39,10 +39,9 @@ class Solution:
             '''
             if fro not in visit or visit[fro] > stop: 
                 visit[fro] = stop # 이미 지나온 경로에 현재 stop을 지정해줌
-                for t, p in graph[fro]:
-                    if stop < k:
+                if stop < k:
+                    for t, p in graph[fro]:
                         heapq.heappush(Q, [p+price, t, stop+1])
-
         return -1
 
 if __name__ == "__main__":
