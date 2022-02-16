@@ -37,6 +37,7 @@ class Solution:
             heapq.heappop으로 price가 최소인 경로를 추출해왔기에 
             해당 노드를 방문하기 이전에 경유지가 더 적어야 한다.
             '''
+
             if fro not in visit or visit[fro] > stop: 
                 visit[fro] = stop # 이미 지나온 경로에 현재 stop을 지정해줌
                 if stop < k:
