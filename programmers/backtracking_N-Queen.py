@@ -1,8 +1,8 @@
 from collections import defaultdict
 
-answer = 0
 def solution(n):
 
+    answer = 0
     visited = defaultdict(int)
 
     def valid(row):
@@ -15,7 +15,7 @@ def solution(n):
 
     def n_queen(row):
 
-        global answer
+        nonlocal answer
         if row == n:
             answer+=1
             return
@@ -26,3 +26,5 @@ def solution(n):
                     n_queen(row+1)
     n_queen(0)
     return answer
+
+print(solution(4))
